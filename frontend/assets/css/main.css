@@ -1,0 +1,364 @@
+/* Корпоративный стиль торговой сети Лента */
+:root {
+  --lenta-blue: #003C95;
+  --lenta-white: #FFFFFF;
+  --lenta-light-gray: #F5F5F5;
+  --lenta-border: #E0E0E0;
+  --lenta-text: #333333;
+  --lenta-text-light: #666666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--lenta-text);
+  background-color: var(--lenta-light-gray);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background-color: var(--lenta-blue);
+  color: var(--lenta-white);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: var(--lenta-white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+/* Main content */
+.main-content {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--lenta-blue);
+  color: var(--lenta-white);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #0052CC;
+}
+
+.btn-secondary {
+  background-color: var(--lenta-white);
+  color: var(--lenta-blue);
+  border: 2px solid var(--lenta-blue);
+}
+
+.btn-secondary:hover {
+  background-color: var(--lenta-light-gray);
+}
+
+/* Cards */
+.card {
+  background-color: var(--lenta-white);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Tables */
+.table-container {
+  background-color: var(--lenta-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--lenta-blue);
+  color: var(--lenta-white);
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--lenta-border);
+}
+
+tbody tr:hover {
+  background-color: var(--lenta-light-gray);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--lenta-text);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--lenta-border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--lenta-blue);
+  box-shadow: 0 0 0 3px rgba(0, 60, 149, 0.1);
+}
+
+/* Order items */
+.order-items {
+  margin-top: 1.5rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--lenta-border);
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item-info {
+  flex: 1;
+}
+
+.order-item-price {
+  font-weight: 600;
+  color: var(--lenta-blue);
+}
+
+.order-total {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--lenta-blue);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-new {
+  background-color: #E3F2FD;
+  color: #1976D2;
+}
+
+.status-processing {
+  background-color: #FFF3E0;
+  color: #F57C00;
+}
+
+.status-completed {
+  background-color: #E8F5E9;
+  color: #388E3C;
+}
+
+.status-cancelled {
+  background-color: #FFEBEE;
+  color: #D32F2F;
+}
+
+/* Links */
+.link {
+  color: var(--lenta-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--lenta-text-light);
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--lenta-text-light);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--lenta-white);
+  border-top: 1px solid var(--lenta-border);
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--lenta-text-light);
+  font-size: 0.875rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Hover effects */
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 60, 149, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Table improvements */
+table {
+  font-size: 0.95rem;
+}
+
+tbody tr {
+  transition: background-color 0.2s;
+}
+
+/* Form improvements */
+.form-group input:focus,
+.form-group select:focus {
+  transition: all 0.2s;
+}
+
+/* Status badge improvements */
+.status-badge {
+  transition: all 0.2s;
+  cursor: default;
+}
+
+/* Link improvements */
+.link {
+  transition: all 0.2s;
+}
+
+.link:hover {
+  color: #0052CC;
+}
+
+/* Stat cards */
+.stat-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
